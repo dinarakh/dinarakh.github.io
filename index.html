@@ -1,7 +1,69 @@
 <html>
-  <head>
-  </head>
-  <body>
-    Hi I am Dinar
-  </body>
+
+<head>
+<style>
+
+</style>
+
+<script>
+
+
+setTimeout(() => {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }  
+  }, 20);
+
+function openTab(evt, tabName) {
+
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+</head>
+  
+<body>
+
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'About Me')">About Me</button>
+    <button class="tablinks" onclick="openTab(event, 'Projects')">Projects</button>
+</div>
+
+<!-- Tab content -->
+<div id="Home" class="tabcontent">
+  <img src = 'https://scontent-ort2-2.cdninstagram.com/v/t51.2885-15/fr/e15/s1080x1080/101660097_619473621975685_6089114980736914625_n.jpg?_nc_ht=scontent-ort2-2.cdninstagram.com&_nc_cat=101&_nc_ohc=i_5U-WRf1HcAX9gZvcA&edm=AABBvjUBAAAA&ccb=7-4&oh=7651dd8e7a15aa81a1eb6826c69e1ac2&oe=6193FEB2&_nc_sid=83d603'></img>
+</div>
+
+<div id="About Me" class="tabcontent">
+  <p>Real Bashkort G.</p>
+</div>
+
+<div id="Projects" class="tabcontent">
+  <list>
+    <li> </li>
+	<li> </li>
+	<li> </li>
+  </list>
+</div>
+
+</body>  
+  
 </html>
