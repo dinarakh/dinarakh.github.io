@@ -44,7 +44,7 @@ function openTab(evt, tabName) {
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Home')">Home</button>
   <button class="tablinks" onclick="openTab(event, 'About Me')">About Me</button>
-    <button class="tablinks" onclick="openTab(event, 'Projects')">ukraina</button>
+    <button class="tablinks" onclick="openTab(event, 'Ukraina')">ukraina</button> <!-- ty tut ne pomynyal parameter dlya opentab na 'Ukraine'>
 </div>
 
 <!-- Tab content -->
@@ -56,8 +56,10 @@ function openTab(evt, tabName) {
   <p>Real Bashkort G.</p>
 </div>
 
-<div id="ukraina" class="tabcontent">
-  <img width="400" src ='https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg'></img>
+<div id="Ukraina" class="tabcontent">
+  <!--Eto '.svg' - img tag rabotaet s .jpeg, .jpg, .png, i tak dalee-->
+  <object data="https://upload.wikimedia.org/wikipedia/commons/4/49/Flag_of_Ukraine.svg" type="image/svg+xml">
+</object>
 </div>
 
 </body>  
