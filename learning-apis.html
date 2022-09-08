@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <title>Learning APIs</title>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.js" integrity="sha512-rozBdNtS7jw9BlC76YF1FQGjz17qQ0J/Vu9ZCFIW374sEy4EZRbRcUZa2RU/MZ90X2mnLU56F75VfdToGV0RiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	
+    <script>
+	  
+	  function getAndReportDogePrice()
+	  {
+	    const apiUrl = 'https://api.coindesk.com/v1/bpi/currentprice.json';
+	  
+	    const httpRequest = {
+	      method: 'get',
+	      url: apiUrl
+	    };
+      
+	    axios(httpRequest)
+		  .then(result => alert(JSON.stringify(result)))
+		  .catch(err => alert(err));	  
+	  }
+	
+	getAndReportDogePrice();
+	
+     /* 
+	    1. https://www.w3schools.com/js/js_promise.asp
+        2. https://axios-http.com/docs/intro
+		3. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+		4. https://restfulapi.net/
+	  */	
+	
+	</script>
+
+</html>
